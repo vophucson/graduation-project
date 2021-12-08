@@ -16,10 +16,8 @@ class OrderHistoryDetailController extends GetxController {
   var totalPrice =0.obs;
   var status =''.obs;
   var productSize =0.0.obs;
-  var shipName = ''.obs;
   var shipperName =''.obs;
   var phoneShipper = ''.obs;
-  var shipPrice =0.obs;
   var shipAddress = ''.obs;
   var imageUrl = ''.obs;
   var trackOrderList =[];
@@ -36,9 +34,7 @@ class OrderHistoryDetailController extends GetxController {
     try {
       isLoading(true);
       trackOrderList =[];
-      shipName('');
       expireDate('');
-      shipPrice(0);
       var response = await APIService.getOrderHistoryDetail(
           orderId, loginController.box.read('token'));
       if (response.data !=null) {
@@ -51,9 +47,7 @@ class OrderHistoryDetailController extends GetxController {
         totalPrice(response.data![0].totalPrice);
         status(response.data![0].status);
         productSize(response.data![0].productSize.toDouble());
-        shipName(response.data![0].shipNane);
         phoneShipper(response.data![0].phoneShipper);
-        shipPrice(response.data![0].shipPrice);
         shipAddress(response.data![0].shipAddress);
         shipperName(response.data![0].shipperName);
         imageUrl(response.data![0].imageUrl);

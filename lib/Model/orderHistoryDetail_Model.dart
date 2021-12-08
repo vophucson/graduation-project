@@ -35,10 +35,8 @@ class Data {
   int? totalPrice;
   String? status;
   dynamic productSize;
-  String? shipNane;
   String? shipperName;
   String? phoneShipper;
-  int? shipPrice;
   String? shipAddress;
 
   Data(
@@ -52,10 +50,8 @@ class Data {
         this.totalPrice,
         this.status,
         this.productSize,
-        this.shipNane,
         this.shipperName,
         this.phoneShipper,
-        this.shipPrice,
         this.shipAddress});
 
   Data.fromJson(Map<String, dynamic> json) {
@@ -69,10 +65,8 @@ class Data {
     totalPrice = json['totalPrice'];
     status = json['status'];
     productSize = json['productSize'];
-    shipNane = json['shipNane'];
     shipperName = json['shipperName'];
     phoneShipper = json['phoneShipper'];
-    shipPrice = json['shipPrice'];
     shipAddress = json['shipAddress'];
   }
 
@@ -88,10 +82,8 @@ class Data {
     data['totalPrice'] = this.totalPrice;
     data['status'] = this.status;
     data['productSize'] = this.productSize;
-    data['shipNane'] = this.shipNane;
     data['shipperName'] = this.shipperName;
     data['phoneShipper'] = this.phoneShipper;
-    data['shipPrice'] = this.shipPrice;
     data['shipAddress'] = this.shipAddress;
     return data;
   }

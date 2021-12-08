@@ -228,66 +228,6 @@ class OrderHistoryDetail extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: Text.rich(
                       TextSpan(
-                        text: "Dịch vụ giao hàng:",
-                        style: GoogleFonts.spartan(
-                          textStyle: TextStyle(
-                            fontSize: 14,
-                            color: Colors.black87,
-                            fontWeight: FontWeight.w700,
-                            letterSpacing: -1,
-                          ),
-                        ),
-                        children: [
-                          TextSpan(
-                            text:
-                                "  ${_orderHistoryDetailController.shipName == ''.obs ? 'Chưa chọn' : _orderHistoryDetailController.shipName}",
-                            style: GoogleFonts.spartan(
-                              textStyle: TextStyle(
-                                fontSize: 14,
-                                color: Colors.redAccent,
-                                fontWeight: FontWeight.w700,
-                                letterSpacing: -1,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Text.rich(
-                      TextSpan(
-                        text: "Phí giao hàng:",
-                        style: GoogleFonts.spartan(
-                          textStyle: TextStyle(
-                            fontSize: 14,
-                            color: Colors.black87,
-                            fontWeight: FontWeight.w700,
-                            letterSpacing: -1,
-                          ),
-                        ),
-                        children: [
-                          TextSpan(
-                            text:
-                                "  ${_orderHistoryDetailController.shipPrice.toVND(unit: 'VND')}",
-                            style: GoogleFonts.spartan(
-                              textStyle: TextStyle(
-                                fontSize: 14,
-                                color: Colors.redAccent,
-                                fontWeight: FontWeight.w700,
-                                letterSpacing: -1,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Text.rich(
-                      TextSpan(
                         text: "Tổng tiền:",
                         style: GoogleFonts.spartan(
                           textStyle: TextStyle(

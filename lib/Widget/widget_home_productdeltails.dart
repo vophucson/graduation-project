@@ -549,6 +549,7 @@ class _homeProductdeltails extends State<homeProductdeltails> {
                                                   .toInt(),
                                               reviewController
                                                   .sendComment.value);
+                                        //  Get.back();
                                         },
                                         child: Text(
                                           "Gủi bình luận",
@@ -651,7 +652,7 @@ class _homeProductdeltails extends State<homeProductdeltails> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            "Chọn số lượng",
+            "Số lượng",
             style: GoogleFonts.spartan(
               textStyle: TextStyle(
                 fontSize: 17,
@@ -670,25 +671,6 @@ class _homeProductdeltails extends State<homeProductdeltails> {
   Widget buildquantity(BuildContext context) {
     return Row(
       children: <Widget>[
-        SizedBox(
-          width: 30,
-          height: 30,
-          child: OutlineButton(
-            color: Colors.redAccent,
-            padding: EdgeInsets.zero,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5),
-            ),
-            child: Icon(Icons.remove),
-            onPressed: () {
-              if (numOfItems > 1) {
-                setState(() {
-                  numOfItems--;
-                });
-              }
-            },
-          ),
-        ),
         Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: 5,
@@ -705,23 +687,6 @@ class _homeProductdeltails extends State<homeProductdeltails> {
             ),
           ),
         ),
-        SizedBox(
-          width: 30,
-          height: 30,
-          child: OutlineButton(
-            color: Colors.redAccent,
-            padding: EdgeInsets.zero,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5),
-            ),
-            child: Icon(Icons.add),
-            onPressed: () {
-              setState(() {
-                numOfItems++;
-              });
-            },
-          ),
-        )
       ],
     );
   }
